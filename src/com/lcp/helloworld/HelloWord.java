@@ -32,6 +32,12 @@ public class HelloWord {
 		return super.toString()+"@override";
 	}
 
+	//我
+	//说
+	//你
+	//好
+	//聪
+	//明
 }
 	
 	
