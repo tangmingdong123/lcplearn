@@ -5,7 +5,7 @@ public class IntegerLearn {
 	public static void main(String[] args) {
 		//咱俩的
 		printTangAndPingzi();
-
+		printPingHome();
 		
 		//题目，你们家四个人的,年龄和、爸爸与你年龄差，爸爸整除弟弟，全家平均年龄
 	}
@@ -41,4 +41,21 @@ public class IntegerLearn {
 		//在这之前恐龙不存在
 		System.out.println("在这之前恐龙不存在："+Integer.MIN_VALUE+"年");
 	}
+    public static void printPingHome(){
+    	int daugherAge = 26;
+    	int sonAge = 18;
+    	int fatherAge = 49;
+    	int motherAge = 49;
+    	
+    	//年龄和
+    	System.out.println("年龄和："+(daugherAge+sonAge+fatherAge+motherAge)+"age");
+    	//爸爸与我年龄差
+    	System.out.println("爸爸与我年龄差："+(fatherAge-daugherAge)+"age");
+    	//爸爸整除弟弟
+    	System.out.println("爸爸整除弟弟"+Math.rint(fatherAge/sonAge)+"age");
+    	//全家平均年龄
+    	System.out.println("全家平均年龄"+(daugherAge+sonAge+fatherAge+motherAge)/4+"age");
+    }
 }
+
+    
