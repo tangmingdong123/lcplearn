@@ -4,8 +4,6 @@ public class HelloWord {
 
 	public static void main(String[] args) {
 	    call.tiaoxi();
-	    subway.geton();
-	    subway.getoff();
 	}
 	
 	public static class call{
