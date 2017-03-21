@@ -16,7 +16,7 @@ public class LoopLearn {
 		System.out.println("包含7的共有："+a+"个数字");
 		
 		for(int i=1;i<=1000;i++){
-			if (i%1==7||i%10==7||i%100==7){	    
+			if (i%1==7||i%10==7||i%11==7||i%100==7||i%101==7||i%110==7||i%111==7){	    
 		        System.out.println("包含7的："+i);
 			    b++;
 			}
