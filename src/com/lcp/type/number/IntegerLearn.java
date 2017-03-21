@@ -55,6 +55,12 @@ public class IntegerLearn {
     	System.out.println("爸爸整除弟弟"+Math.rint(fatherAge/sonAge)+"age");
     	//全家平均年龄
     	System.out.println("全家平均年龄"+(daugherAge+sonAge+fatherAge+motherAge)/4+"age");
+    	for(int i=0;i<4;i++){
+    		int[] a={26,18,49,49};
+    		//5年后年龄
+        	System.out.println("5年后年龄"+(a[i]+5)+"age");
+    	}
+    	
     }
 }
 
