@@ -24,4 +24,10 @@ public class HelloWord {
 			System.out.println("hi,i am get off the subway,time is 08:55am");
 		}
 	}
+	//我
+	//说
+	//你
+	//好
+	//聪
+	//明
 }
