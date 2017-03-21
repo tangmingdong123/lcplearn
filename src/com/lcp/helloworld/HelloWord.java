@@ -24,5 +24,5 @@ public class HelloWord {
 			System.out.println("hi,i am get off the subway,time is 08:55am");
 		}
 	}
-
+	//这行是我加的
 }
