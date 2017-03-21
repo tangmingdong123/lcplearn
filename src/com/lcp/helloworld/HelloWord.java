@@ -24,14 +24,17 @@ public class HelloWord {
 			System.out.println("hi,i am get off the subway,time is 08:55am");
 		}
 	}
-<<<<<<< HEAD
-	
-=======
+
 	//这行是我加的
 	
 	@Override
 	public String toString(){
 		return super.toString()+"@override";
 	}
->>>>>>> branch 'master' of https://github.com/tangmingdong123/lcplearn.git
+
 }
+	
+	
+	
+	
+	
