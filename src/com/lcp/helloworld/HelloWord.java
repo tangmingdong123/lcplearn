@@ -9,7 +9,7 @@ public class HelloWord {
 	public static class call{
 		public static void tiaoxi(){
 			System.out.println("hi,i am xiaotang");
-			System.out.println("hi xiaotang,ti am xiao pingzi");
+			System.out.println("hi xiaotang,i am xiao pingzi");
 		}
 	}
 
