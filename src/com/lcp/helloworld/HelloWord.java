@@ -18,7 +18,7 @@ public class HelloWord {
 	public static class subway{
 		public static  void geton(){
 			String x="hi,i am get on the subway,time is 08:15am";
-			System.out.println(x);
+			System.out.println("when get on the subway,nanshen will send me a message:"+x);
 		}
 		public static void getoff(){
 			System.out.println("hi,i am get off the subway,time is 08:55am");
