@@ -25,4 +25,9 @@ public class HelloWord {
 		}
 	}
 	//这行是我加的
+	
+	@Override
+	public String toString(){
+		return super.toString()+"@override";
+	}
 }
