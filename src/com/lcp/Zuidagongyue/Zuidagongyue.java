@@ -19,7 +19,7 @@ public  class Zuidagongyue{
 			min=a;
 		}
 		for(int i=2;i<=min;i++){
-			if(max%i==0 && (min&i)==0){
+			if(max%i==0 && (min%i)==0){
 				C=i;
 			}
 		}
