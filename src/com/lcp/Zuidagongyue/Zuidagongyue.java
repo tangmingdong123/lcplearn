@@ -2,7 +2,7 @@ package com.lcp.Zuidagongyue;
 
 public class Zuidagongyue{
 	
-	public static void main(int a,int b){
+	public static void main(String[] args){
 		
 		System.out.println("12和6的最大公约数是："+getMaxDivide_ab(12,6));
 		
@@ -22,7 +22,7 @@ public class Zuidagongyue{
                 max=b;
                 min=a;
         }
-        for(int i=2;i<min;i++){
+        for(int i=2;i<=min;i++){
                 if(0==max%i && 0==min%i){
                         value=i;
                 }
