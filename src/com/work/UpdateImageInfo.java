@@ -5,6 +5,7 @@ import java.text.MessageFormat;
 import org.apache.commons.io.IOUtils;
 
 import com.work.http.HttpUtils;
+import com.work.json.JSONTool;
 
 public class UpdateImageInfo {
 	public static void main(String[] args) throws Exception {
@@ -19,6 +20,6 @@ public class UpdateImageInfo {
 		
 		String json = HttpUtils.put(url
 				,requestJSON);
-		System.out.println("response:"+json);
+		System.out.println("response:"+JSONTool.formatJson(json));
 	}
 }
