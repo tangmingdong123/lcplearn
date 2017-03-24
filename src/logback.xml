@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="30 seconds">
+    <property name="project" value="honeycomb-tenant"/>
+    <property name="logLevel" value="INFo"/>
+    <property name="logPath" value="C:/tomcat_8080_lcp"/>
+    <!-- 输出到控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200} | %file\(%line\) | %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <!-- error日志 -->
+    <!-- 按日期滚动日志 -->
+    <appender name="ERROR-OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志存放位置 -->
+        <file>${logPath}/error/${project}-error.log</file>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200} | %file\(%line\) | %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/error/${project}-error.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <!-- 保存30天历史 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- info日志 -->
+    <!-- 按文件大小滚动日志 -->
+    <appender name="INFO-OUT" 
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/info/${project}-info.log</file>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200} | %file\(%line\) | %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/info/${project}-info-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!-- debug日志 -->
+    <!-- 按日期和大小滚动日志 -->
+    <appender name="DEBUG-OUT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/debug/${project}-debug.log</file>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200} | %file\(%line\) | %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/debug/${project}-debug-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy 
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    
+      <!-- warn日志 -->
+    <!-- 按日期和大小滚动日志 -->
+    <appender name="WARN-OUT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/warn/${project}-warn.log</file>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200} | %file\(%line\) | %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/warn/${project}-warn-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    
+    
+     <!-- statistics appender  -->
+    <appender name="_statistics"
+class="ch.qos.logback.core.rolling.RollingFileAppender">
+       <file>${logPath}/statistics/${project}-statistics.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/statistics/${project}-statistics-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+           <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200} | %file\(%line\) | %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+</appender>
+<logger name="statistics" level="info" additivity="false">
+<appender-ref ref="_statistics" />
+</logger>
+    
+<logger name="ch.qos.logback.classic" level="ERROR"></logger>    
+
+    
+    <!-- 配置好前面对应的appender -->
+    <root level="${logLevel}">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="ERROR-OUT" />
+        <appender-ref ref="INFO-OUT" />
+        <appender-ref ref="WARN-OUT" />
+        <appender-ref ref="DEBUG-OUT" />
+    </root>
+</configuration>
