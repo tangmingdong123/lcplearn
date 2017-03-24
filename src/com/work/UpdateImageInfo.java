@@ -20,6 +20,6 @@ public class UpdateImageInfo {
 		
 		String json = HttpUtils.put(url
 				,requestJSON);
-		System.out.println("response:"+json);
+		System.out.println("response:"+JSONTool.formatJson(json));
 	}
 }
