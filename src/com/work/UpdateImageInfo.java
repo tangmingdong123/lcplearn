@@ -8,8 +8,8 @@ import com.work.http.HttpUtils;
 
 public class UpdateImageInfo {
 	public static void main(String[] args) throws Exception {
-		String username = "tom";
-		String imagename = "mysql";
+		String username = "admin";
+		String imagename = "alpine";
 		String requestJSON = IOUtils.toString(UpdateImageInfo.class.getResourceAsStream("/com/work/updateImageInfoRequest.json"));
 		System.out.println("request:\n"+requestJSON);
 		
