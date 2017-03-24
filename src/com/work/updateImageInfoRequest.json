@@ -3,7 +3,7 @@
         "type": "1",
         "official": true,
         "icon": "http://icon.some.io/ic123.png",
-        "desc": "some description for this image",
+        "desc": "tom/mysql/info/rewrite",
         "public": false
     }
 }
