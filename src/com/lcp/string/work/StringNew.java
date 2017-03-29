@@ -75,13 +75,14 @@ public class StringNew {
     	String[] a = str.split("£¬"); 
     	String[] result=new String[12];
     	String temp = "";
+    	int pos=0;
 		for(int i=0;i<a.length;i++){  
 			String[] b = a[i].split("¡¢");
 			for(int m=0;m<b.length;m++){
 				String[] c = b[m].split("£»");
 				for(int n=0;n<c.length;n++){
-				result[n]=c[n];
-				System.out.println("result"+n + result[n]);
+				result[pos++]=c[n];
+				//System.out.println("result"+n + result[n]);
 				}
 			}
 	    }
