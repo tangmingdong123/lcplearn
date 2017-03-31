@@ -49,82 +49,84 @@ public class StringNew {
 	}
 
 	public static void newline(String str) {
-		String[] a = str.split("，"); 
-		for(int i=0;i<a.length;i++){  
+		String[] a = str.split("，");
+		for (int i = 0; i < a.length; i++) {
 			String[] b = a[i].split("、");
-			for(int m=0;m<b.length;m++){
+			for (int m = 0; m < b.length; m++) {
 				String[] c = b[m].split("；");
-				for(int n=0;n<c.length;n++){
-				System.out.println("处理结果: "+c[n]);
+				for (int n = 0; n < c.length; n++) {
+					System.out.println("处理结果: " + c[n]);
 				}
 			}
-	    }
-    }
-    public static void changeencode(String str){
-    	try{
+		}
+	}
+
+	public static void changeencode(String str) {
+		try {
 			byte[] str1 = str.getBytes();
-			
-			str1 = str.getBytes( "UTF-8" );
-			System.out.println("UTF-8返回值：" + str1 );
-			
-			str1 =str.getBytes( "ISO-8859-1" );
-			System.out.println("ISO-8859-1返回值：" + str1 );
-		} catch ( UnsupportedEncodingException e){
+
+			str1 = str.getBytes("UTF-8");
+			System.out.println("UTF-8返回值：" + str1);
+
+			str1 = str.getBytes("ISO-8859-1");
+			System.out.println("ISO-8859-1返回值：" + str1);
+		} catch (UnsupportedEncodingException e) {
 			System.out.println("不支持的字符集");
 		}
-    }
-    public static void largeststring(String str){
-    	String[] a = str.split("，"); 
-    	String[] result=new String[12];
-    	String temp = "";
-    	int pos=0;
-		for(int i=0;i<a.length;i++){  
+	}
+
+	public static void largeststring(String str) {
+		String[] a = str.split("，");
+		String[] result = new String[12];
+		String temp = "";
+		int pos = 0;
+		for (int i = 0; i < a.length; i++) {
 			String[] b = a[i].split("、");
-			for(int m=0;m<b.length;m++){
+			for (int m = 0; m < b.length; m++) {
 				String[] c = b[m].split("；");
-				for(int n=0;n<c.length;n++){
-				result[pos++]=c[n];
-				//System.out.println("result"+n + result[n]);
+				for (int n = 0; n < c.length; n++) {
+					result[pos++] = c[n];
+					// System.out.println("result"+n + result[n]);
 				}
 			}
-	    }
-		for(int i=1;i<result.length;i++){
-			String t1=result[i-1];
-			String t2=result[i];		
-			if (t1.length()>=t2.length()){
-				temp=t1;
-			}
-			else 
-				temp=t2;
+		}
+		for (int i = 1; i < result.length; i++) {
+			String t1 = result[i - 1];
+			String t2 = result[i];
+			if (t1.length() >= t2.length()) {
+				temp = t1;
+			} else
+				temp = t2;
 		}
 		System.out.println("分割后最大字符串为：" + temp);
-		
+
 	}
-    public static void sortstring(String str){
-    	String[] a = str.split("，"); 
-    	String[] result=new String[12];
-    	int pos=0;
-		for(int i=0;i<a.length;i++){  
+
+	public static void sortstring(String str) {
+		String[] a = str.split("，");
+		String[] result = new String[12];
+		int pos = 0;
+		for (int i = 0; i < a.length; i++) {
 			String[] b = a[i].split("、");
-			for(int m=0;m<b.length;m++){
+			for (int m = 0; m < b.length; m++) {
 				String[] c = b[m].split("；");
-				for(int n=0;n<c.length;n++){
-				result[pos++]=c[n];
-				//System.out.println("result"+n + result[n]);
+				for (int n = 0; n < c.length; n++) {
+					result[pos++] = c[n];
+					// System.out.println("result"+n + result[n]);
 				}
 			}
-	    }
-		
-		Arrays.sort(result);  
-		for(String str1 : result) {  
-		    System.out.println("分割后排序结果为："+str1);  
-		}  
-		for(int i=1;i<result.length;i++){
-			if(result[i-1].equals(result[i])){				
-				System.out.println("分割后的字符串有相同的字符串"+i);
-			}			
+		}
+
+		Arrays.sort(result);
+		for (String str1 : result) {
+			System.out.println("分割后排序结果为：" + str1);
+		}
+		for (int i = 1; i < result.length; i++) {
+			if (result[i - 1].equals(result[i])) {
+				System.out.println("分割后的字符串有相同的字符串" + i);
+			}
 		}
 		System.out.println("分割后的字符串没有相同的字符串");
-    }
+	}
 
 }

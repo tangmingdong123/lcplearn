@@ -22,11 +22,11 @@ public class LoopLearn {
 			}
 		}
 		System.out.println("包含7的共有：" + b + "个数字");
-		
-		//更简单
+
+		// 更简单
 		b = 0;
 		for (int i = 1; i <= 1000; i++) {
-			if (String.valueOf(i).indexOf("7")!=-1) {
+			if (String.valueOf(i).indexOf("7") != -1) {
 				System.out.println("包含7的-：" + i);
 				b++;
 			}
