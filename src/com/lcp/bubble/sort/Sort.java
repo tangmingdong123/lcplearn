@@ -5,7 +5,7 @@ public class Sort {
 	for(int i=0;i<num.length;i++){
 		int a=num[i];
 		int b=num[i+1];
-		if (a<=b){
+		if (a>=b){
 			num[i]=b;
 			num[i+1]=a;
 		}
