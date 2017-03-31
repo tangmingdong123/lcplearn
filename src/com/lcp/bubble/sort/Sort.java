@@ -12,8 +12,9 @@ public class Sort {
 		}
 		}
 	}
-	for(int m=0;m<num.length;m++){
-		System.out.println(num[m]);
+	System.out.print("排序后结果为：");
+	for(int m=0;m<num.length;m++){		
+		System.out.print(num[m]+",");
 	}
  }
 public static void main(String[] args){
