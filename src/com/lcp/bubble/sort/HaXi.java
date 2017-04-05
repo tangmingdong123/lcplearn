@@ -1,7 +1,8 @@
 package com.lcp.bubble.sort;
 
+
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
-import java.util.Map;
 
 public class HaXi {
 
@@ -11,13 +12,16 @@ public class HaXi {
 		String str1 = str.replaceAll("\\.","");
 		String str2 = str1.replaceAll("\\。","");
 		count(str2);
+		long start = System.currentTimeMillis();
+	    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    System.out.println("当前时间：" + sdf.format(start));
 	}
 	
 	public static void count(String str){
-		HashMap<String,Integer> map = new HashMap<String, Integer>(str.length());
+		HashMap map = new HashMap (str.length());
 		for(int i=0;i<str.length();i++){
 			int c=0;
-			for(int m=1;m<str.length();m++){
+			for(int m=0;m<str.length();m++){
 				if(str.charAt(i)==str.charAt(m)){
 					c++;
 				}				
@@ -25,13 +29,8 @@ public class HaXi {
 			String word=String.valueOf(str.charAt(i));
 			if(map.get(word) == null){
 				map.put(word,c);
-			}
-			else
-				{
-				map.put(word,1+map.get(word));
-				}
-			
+			}			
 		}
-		System.out.print(map);
+		//System.out.print(map);
 	}
 }
