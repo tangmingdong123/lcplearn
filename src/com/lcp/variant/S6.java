@@ -10,7 +10,7 @@ public class S6 {
 	}
 	
 	public void printBuyDate(){
-		System.out.println("S6.size="+buyDate);
+		System.out.println("mydate="+this.buyDate);
 	}
 	
 	public static void main(String[] args) {
