@@ -1,19 +1,21 @@
 package com.lcp.variant;
 
 public class Child extends Father{
+	   private static int mem;
 	   public Child() {
 	       System.out.println("子类版本构造函数");
+	       System.out.println("子类的mem初始值"+mem);
+	       this.mem=2;
 	   }
-	   public  String c="child";
-	   
-	   public  static void main(String []args){
+	   public void Out() {
+	      System.out.println("这里是子类的输出方法"+this.mem);
+	  }
+	
+	 
+	public  static void main(String []args){
 	        Father f=new Child();
 	        Child c=new Child();
-	        Child fc=(Child) f;
-	        System.out.println(f.F);
-	        System.out.println(fc.F);
-	        System.out.println(fc.c);
-	        System.out.println(c.F);
-	        System.out.println(c.c);
+	        f.Out();
+	        c.Out();
 	}
-	}
+}
