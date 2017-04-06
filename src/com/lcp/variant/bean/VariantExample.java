@@ -44,7 +44,7 @@ public class VariantExample {
 	}
 	
 	//学习参数变量
-	public void setPrivateAge(int privateAge/*这里的privateAge是setRealAge函数的一个参数，叫做参数变量*/){
+	public void setPrivateAge(int privateAge/*这里的privateAge是setPrivateAge函数的一个参数，叫做参数变量*/){
 		this.privateAge = privateAge;//this表示当前实例，this.privateAge是当前实例的成员变量,而没有this.的privateAge是参数变量
 	}
 	//学习参数变量2
