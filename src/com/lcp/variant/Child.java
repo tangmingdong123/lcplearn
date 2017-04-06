@@ -11,6 +11,7 @@ public class Child extends Father{
 	        Child c=new Child();
 	        Child fc=(Child) f;
 	        System.out.println(f.F);
+	        System.out.println(fc.F);
 	        System.out.println(fc.c);
 	        System.out.println(c.F);
 	        System.out.println(c.c);
