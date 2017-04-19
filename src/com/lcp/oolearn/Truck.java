@@ -10,7 +10,7 @@ public class Truck extends Car{
 	public void setWheels(int wheels){
 		this.wheels=wheels;
 	}
-@Override
+	@Override
 	public void printInfo() {
 		System.out.println(this.getOil());
 		System.out.println(this.getWeight());

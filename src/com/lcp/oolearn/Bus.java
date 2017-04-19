@@ -10,7 +10,7 @@ public class Bus extends Car {
 	public void setCapacity(int capacity){
 		this.capacity=capacity;
 	}
-@Override
+	@Override
 	public void printInfo() {
 	System.out.println(this.getOil());
 	System.out.println(this.getWeight());
