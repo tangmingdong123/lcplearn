@@ -11,13 +11,11 @@ public class OOTest {
 		for(int i=0;i<5;i++){
 			trucks[i] = new Truck();
 			trucks[i].setWheels(wheel[i]);
-			wheelNum=wheelNum+trucks[i].getWheels();		
-	}	
-		for(int i=0;i<5;i++){
+			wheelNum=wheelNum+trucks[i].getWheels();
 			bus[i] = new Bus();
 			bus[i].setCapacity(capacity[i]);
-			capacityNum=capacityNum+bus[i].getCapacity();		
-	}
+			capacityNum=capacityNum+bus[i].getCapacity();
+	}	
 		System.out.println(wheelNum);
 		System.out.println(capacityNum);
   }
