@@ -5,14 +5,25 @@ public class Car {
 	private int oil;
 	private int weight;
 
-	public void getCarInfo(int args) {
-		System.out.println(this.oil);
-		System.out.println(this.weight);
+	public int getOil() {
+		return oil;
 	}
 
-	public void setCarInfo(int oil, int weight) {
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setOil(int oil) {
 		this.oil = oil;
-		this.weight = weight;
+	}
+
+	public void setWeight(int weight) {
+		this.oil = weight;
+	}
+
+	public void printInfo() {
+		System.out.println(this.oil);
+		System.out.println(this.weight);
 	}
 
 }

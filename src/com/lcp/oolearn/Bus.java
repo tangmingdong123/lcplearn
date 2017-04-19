@@ -3,16 +3,18 @@ package com.lcp.oolearn;
 public class Bus extends Car {
 	private int capacity;
 
-	public void getCarInfo(int args) {
-		System.out.println(this.oil);
-		System.out.println(this.weight);
-		System.out.println(this.capacity);
+	public int getCapacity() {
+		return capacity;
 	}
-
-	public void setCarInfo(int oil, int weight,int capacity) {
-		this.oil = oil;
-		this.weight = weight;
-		this.weight = capacity;
+	
+	public void setCapacity(int capacity){
+		this.capacity=capacity;
+	}
+@Override
+	public void printInfo() {
+	System.out.println(this.getOil());
+	System.out.println(this.getWeight());
+	System.out.println(this.getCapacity());
 	}
 
 }
